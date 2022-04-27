@@ -98,5 +98,7 @@ int main(int argc, char **argv) {
     if (greped == nullptr) std::cerr << "Nothing with pattern '" << args.pattern() << "' found in file at " << args.fileName() << std::endl;
     else std::cout << greped << std::endl;
 
+    delete greped;
+
     return 0;
 }
