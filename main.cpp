@@ -52,7 +52,7 @@ const char* grep(const char* text, const char* pattern, const bool case_sensitiv
             ls = i+1;
         }
 
-        bool found = case_sensitive ? (strncmp(text + i, pattern, pattern_length) == 0) : (strncasecmp(text + i, pattern, pattern_length) == 0);
+        bool found = case_sensitive ? (std::strncmp(text + i, pattern, pattern_length) == 0) : (strncasecmp(text + i, pattern, pattern_length) == 0);
 
         if (found) {
             int le = 0;
